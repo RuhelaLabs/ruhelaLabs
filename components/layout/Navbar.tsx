@@ -5,6 +5,7 @@ import { SITE } from "@/lib/constants/site"
 import { NavbarClient } from "./NavbarClient"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { CalendlyButton } from "@/components/common/CalendlyButton"
 
 export function Navbar() {
   return (
@@ -51,16 +52,14 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            href="/contact"
-            prefetch={true}
+          <CalendlyButton
             className={cn(
               buttonVariants({ variant: "default" }),
               "gradient-brand text-white font-semibold hover:opacity-90 transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-indigo-200"
             )}
           >
             Get Free Consultation
-          </Link>
+          </CalendlyButton>
         </div>
 
         {/* Mobile Hamburger */}

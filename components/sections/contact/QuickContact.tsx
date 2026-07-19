@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { SITE } from "@/lib/constants/site"
 import { buildWhatsAppUrl } from "@/lib/utils"
 import { FadeIn } from "@/components/animations/FadeIn"
+import { CalendlyButton } from "@/components/common/CalendlyButton"
 
 export function QuickContact() {
   return (
@@ -98,17 +99,14 @@ export function QuickContact() {
               </p>
             </div>
           </div>
-          <a
-            href={SITE.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
+          <CalendlyButton
             className={cn(
               buttonVariants({ variant: "default" }),
               "w-full gradient-brand text-white font-semibold hover:opacity-90 transition-opacity"
             )}
           >
             Schedule a Call
-          </a>
+          </CalendlyButton>
         </div>
       </FadeIn>
 

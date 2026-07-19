@@ -1,8 +1,8 @@
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { FadeIn } from "@/components/animations/FadeIn"
+import { CalendlyButton } from "@/components/common/CalendlyButton"
 
 export function FinalCTA() {
   return (
@@ -35,8 +35,7 @@ export function FinalCTA() {
             guesswork. Just a plan built specifically around your business goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
+            <CalendlyButton
               className={cn(
                 buttonVariants({ size: "lg" }),
                 "bg-white text-primary hover:bg-white/90 font-bold hover:scale-[1.02] transition-all duration-200 shadow-2xl group"
@@ -44,7 +43,7 @@ export function FinalCTA() {
             >
               Get Free Consultation
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </CalendlyButton>
           </div>
           <p className="mt-6 text-sm text-white/60">
             ✓ Free &nbsp;•&nbsp; No commitment &nbsp;•&nbsp; Reply within 2 hours

@@ -21,5 +21,5 @@ export const SITE = {
     twitter: "https://twitter.com/ruhelasolutions",
     facebook: "https://facebook.com/ruhelasolutions",
   },
-  calendly: "https://calendly.com/ruhelasolutions/30min", // Replace with actual
+  calendly: "https://calendly.com/ruhelalabs/30min", // Replace with actual
 } as const

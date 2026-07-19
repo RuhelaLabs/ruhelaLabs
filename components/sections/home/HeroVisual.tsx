@@ -21,7 +21,10 @@ export function HeroVisual() {
         {/* Card */}
         <div
           className="relative rounded-3xl p-10 sm:p-14 flex flex-col items-center gap-10"
-          style={{ background: "linear-gradient(135deg, #0d1220 0%, #1a1f35 100%)" }}
+          style={{
+            background: "linear-gradient(135deg, #0d1220 0%, #1a1f35 100%)",
+            boxShadow: "0 0 40px #7c3aed44, 0 0 80px #4f46e522, 0 25px 50px rgba(0,0,0,0.5)",
+          }}
         >
           {/* Top border shimmer */}
           <div
@@ -99,8 +102,8 @@ export function HeroVisual() {
                 Ruhela
               </span>
               <span
-                className="text-base font-semibold tracking-[0.3em] uppercase"
-                style={{ color: "#4a3890" }}
+                className="text-base font-semibold tracking-[0.3em] uppercase text-center"
+                style={{ color: "#a78bfa" }}
               >
                 Solutions
               </span>
@@ -110,14 +113,17 @@ export function HeroVisual() {
           {/* Divider */}
           <div
             className="w-full h-px"
-            style={{ background: "linear-gradient(90deg, transparent, #a78bfa33, #22d3ee33, transparent)" }}
+            style={{
+              background: "linear-gradient(90deg, transparent, #a78bfa, #22d3ee, #a78bfa, transparent)",
+              boxShadow: "0 0 8px #a78bfa99",
+            }}
             aria-hidden="true"
           />
 
           {/* Tagline */}
           <p
-            className="text-xs font-medium tracking-[0.2em] uppercase text-center"
-            style={{ color: "#2e3d6a" }}
+            className="text-xs font-semibold tracking-[0.2em] uppercase text-center"
+            style={{ color: "#c4b5fd" }}
           >
             AI &nbsp;·&nbsp; Digital Marketing &nbsp;·&nbsp; Content &nbsp;·&nbsp; Growth
           </p>

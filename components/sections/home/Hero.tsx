@@ -6,6 +6,7 @@ import { motion } from "motion/react"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { HeroVisual } from "@/components/sections/home/HeroVisual"
+import { CalendlyButton } from "@/components/common/CalendlyButton"
 
 const badgeText = "✦ AI-Powered Marketing Agency"
 const headline = ["Grow Your Business", "With The Power of AI"]
@@ -99,8 +100,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.55 }}
               className="flex flex-col sm:flex-row gap-4 mb-6"
             >
-              <Link
-                href="/contact"
+              <CalendlyButton
                 className={cn(
                   buttonVariants({ size: "lg" }),
                   "gradient-brand text-white font-semibold hover:opacity-90 hover:scale-[1.02] transition-all duration-200 shadow-xl shadow-indigo-200 group"
@@ -108,7 +108,7 @@ export function Hero() {
               >
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </CalendlyButton>
               <Link
                 href="#services"
                 className={cn(

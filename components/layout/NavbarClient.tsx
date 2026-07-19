@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import type { NavLink } from "@/lib/constants/nav"
 import { motion, AnimatePresence } from "motion/react"
+import { CalendlyButton } from "@/components/common/CalendlyButton"
 
 type NavbarClientProps = {
   navLinks: NavLink[]
@@ -51,17 +52,14 @@ export function NavbarClient({ navLinks }: NavbarClientProps) {
                 </li>
               ))}
               <li className="pt-2">
-                <Link
-                  href="/contact"
-                  prefetch={true}
-                  onClick={() => setIsOpen(false)}
+                <CalendlyButton
                   className={cn(
                     buttonVariants({ variant: "default" }),
                     "gradient-brand text-white font-semibold w-full hover:opacity-90 transition-opacity"
                   )}
                 >
                   Get Free Consultation
-                </Link>
+                </CalendlyButton>
               </li>
             </ul>
           </motion.div>
