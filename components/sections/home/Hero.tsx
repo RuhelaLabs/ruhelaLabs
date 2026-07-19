@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { motion } from "motion/react"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { LottiePlayer } from "@/components/animations/LottiePlayer"
+import { HeroVisual } from "@/components/sections/home/HeroVisual"
 
 const badgeText = "✦ AI-Powered Marketing Agency"
 const headline = ["Grow Your Business", "With The Power of AI"]
@@ -139,28 +139,8 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — Lottie Animation */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex items-center justify-center"
-          >
-            <div className="relative w-full max-w-lg aspect-square">
-              <div
-                className="absolute inset-0 rounded-3xl opacity-20 blur-2xl"
-                style={{
-                  background:
-                    "radial-gradient(circle, oklch(0.452 0.222 271.9), oklch(0.523 0.267 293.1))",
-                }}
-                aria-hidden="true"
-              />
-              <LottiePlayer
-                src="/lottie/ai-brain.json"
-                className="relative z-10 w-full h-full"
-              />
-            </div>
-          </motion.div>
+          {/* Right — Brand Visual */}
+          <HeroVisual />
         </div>
       </div>
     </section>
