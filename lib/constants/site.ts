@@ -4,7 +4,7 @@ export const SITE = {
   description:
     "We help businesses grow using AI-powered digital marketing. Based in Panchkula, India. Serving clients nationwide.",
   url: "https://ruhelasolutions.com",
-  email: "hello@ruhelasolutions.com",
+  email: "info@ruhelasolutions.com",
   phone: "+917710448056",         // Replace before launch
   whatsapp: "+917710448056",      // Replace before launch
   whatsappMessage:
