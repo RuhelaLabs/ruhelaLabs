@@ -90,7 +90,7 @@ export function HeroVisual() {
               <span
                 className="text-4xl sm:text-5xl font-bold leading-none tracking-tight"
                 style={{
-                  background: "linear-gradient(110deg, #f0eeff 0%, #c4b5fd 38%, #67e8f9 100%)",
+                  background: "linear-gradient(90deg, #ffffff 0%, #a8b8ff 55%, #00cfff 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
