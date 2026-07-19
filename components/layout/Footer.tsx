@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { SITE } from "@/lib/constants/site"
 import { NAV_LINKS } from "@/lib/constants/nav"
@@ -14,7 +15,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="inline-flex items-center gap-2.5 mb-4 hover:opacity-80 transition-opacity">
+              <Image
+                src="/images/logo.svg"
+                alt="Ruhela Solutions"
+                width={32}
+                height={32}
+                unoptimized
+              />
               <span className="text-xl font-extrabold tracking-tight text-white">
                 {SITE.name}
               </span>

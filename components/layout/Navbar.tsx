@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { NAV_LINKS } from "@/lib/constants/nav"
 import { SITE } from "@/lib/constants/site"
 import { NavbarClient } from "./NavbarClient"
@@ -16,10 +17,18 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-xl text-foreground hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
           aria-label={`${SITE.name} — Home`}
         >
-          <span className="gradient-brand-text font-extrabold tracking-tight">
+          <Image
+            src="/images/logo.svg"
+            alt="Ruhela Solutions"
+            width={36}
+            height={36}
+            unoptimized
+            priority
+          />
+          <span className="gradient-brand-text font-extrabold text-xl tracking-tight">
             {SITE.name}
           </span>
         </Link>

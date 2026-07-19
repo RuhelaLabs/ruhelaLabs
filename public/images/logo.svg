@@ -1,0 +1,54 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a1f35" />
+      <stop offset="100%" stop-color="#0d1220" />
+    </linearGradient>
+    <linearGradient id="orbGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6c63ff" />
+      <stop offset="100%" stop-color="#00cfff" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6c63ff" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#00cfff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#6c63ff" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="72" height="72" rx="16" fill="url(#bgGrad)" />
+
+  <ellipse cx="36" cy="36" rx="27" ry="11" fill="none" stroke="url(#ringGrad)" stroke-width="1.2" transform="rotate(-30 36 36)" opacity="0.7" />
+  <ellipse cx="36" cy="36" rx="27" ry="11" fill="none" stroke="url(#ringGrad)" stroke-width="1.2" transform="rotate(30 36 36)" opacity="0.45" />
+
+  <circle cx="36" cy="36" r="9" fill="url(#orbGrad)" filter="url(#softGlow)" />
+  <circle cx="33" cy="33.5" r="2.5" fill="white" opacity="0.35" />
+
+  <line x1="43" y1="29" x2="56" y2="17" stroke="#00cfff" stroke-width="1.5" stroke-linecap="round" opacity="0.8" filter="url(#glow)" />
+  <line x1="56" y1="17" x2="52" y2="16" stroke="#00cfff" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+
+  <line x1="29" y1="43" x2="16" y2="55" stroke="#6c63ff" stroke-width="1.5" stroke-linecap="round" opacity="0.65" filter="url(#glow)" />
+  <line x1="16" y1="55" x2="20" y2="56" stroke="#6c63ff" stroke-width="1.5" stroke-linecap="round" opacity="0.65" />
+
+  <line x1="45" y1="36" x2="60" y2="36" stroke="#00cfff" stroke-width="1.5" stroke-linecap="round" opacity="0.6" filter="url(#glow)" />
+  <circle cx="60" cy="36" r="1.8" fill="#00cfff" opacity="0.9" filter="url(#glow)" />
+
+  <line x1="36" y1="27" x2="36" y2="13" stroke="#6c63ff" stroke-width="1.5" stroke-linecap="round" opacity="0.55" filter="url(#glow)" />
+  <circle cx="36" cy="13" r="1.8" fill="#6c63ff" opacity="0.85" filter="url(#glow)" />
+
+  <circle cx="57" cy="31" r="2" fill="#6c63ff" opacity="0.9" filter="url(#glow)" />
+  <circle cx="15" cy="41" r="2" fill="#00cfff" opacity="0.7" filter="url(#glow)" />
+</svg>
