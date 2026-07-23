@@ -114,7 +114,7 @@ export function QuickContact() {
       <FadeIn direction="left" delay={0.3}>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          We reply within 2 hours &nbsp;•&nbsp; Mon – Sat, 9AM – 8PM
+          We reply within 2 hours
         </div>
       </FadeIn>
     </div>

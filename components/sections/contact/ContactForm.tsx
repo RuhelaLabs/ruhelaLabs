@@ -214,7 +214,7 @@ export function ContactForm() {
         </Button>
 
         <p className="text-xs text-muted-foreground text-center">
-          We reply within 2 hours &nbsp;•&nbsp; Mon – Sat, 9AM – 8PM
+          We reply within 2 hours
         </p>
       </form>
     </div>

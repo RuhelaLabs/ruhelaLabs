@@ -87,7 +87,8 @@ async function sendEmailNotification(
   const resend = new Resend(apiKey)
 
   await resend.emails.send({
-    from: "Ruhela Solutions <noreply@ruhelasolutions.com>",
+    from: "Ruhela Solutions <info@ruhelasolutions.com>",
+    replyTo: "info@ruhelasolutions.com",
     to: [SITE.email],
     subject: `New Lead: ${data.name} — ${data.service}`,
     html: `

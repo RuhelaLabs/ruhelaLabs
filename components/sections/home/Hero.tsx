@@ -15,7 +15,7 @@ const subheadline =
 
 const badges = [
   "Free Consultation",
-  "No commitment",
+  // "No commitment",
   "Reply within 2 hours",
 ]
 
