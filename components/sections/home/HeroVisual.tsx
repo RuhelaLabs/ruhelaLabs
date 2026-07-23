@@ -121,7 +121,7 @@ export function HeroVisual() {
           />
 
           {/* Stats row — mobile only shows here, desktop floats */}
-          <div className="grid grid-cols-3 gap-3 w-full">
+          {/* <div className="grid grid-cols-3 gap-3 w-full">
             {stats.map((stat) => (
               <div
                 key={stat.label}
@@ -139,7 +139,7 @@ export function HeroVisual() {
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Tagline */}
           <p
