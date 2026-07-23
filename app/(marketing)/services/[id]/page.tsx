@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { CalendlyButton } from "@/components/common/CalendlyButton"
 import { FadeIn } from "@/components/animations/FadeIn"
+import { ServiceVisual } from "@/components/sections/services/ServiceVisual"
 
 type Props = { params: Promise<{ id: string }> }
 
@@ -44,60 +45,65 @@ export default async function ServicePage({ params }: Props) {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up">
-            <Link
-              href="/#services"
-              className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-10"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              All Services
-            </Link>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back link */}
+          <Link
+            href="/#services"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-10"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            All Services
+          </Link>
 
-            {/* Icon + badge row */}
-            <div className="flex items-center gap-4 mb-6">
-              <div
-                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center shadow-xl shrink-0`}
-              >
-                <Icon className="h-7 w-7 sm:h-8 sm:h-8 text-white" aria-hidden="true" />
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left — Content */}
+            <FadeIn direction="up">
+              <div className="flex items-center gap-4 mb-6">
+                <div
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center shadow-xl shrink-0`}
+                >
+                  <Icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" aria-hidden="true" />
+                </div>
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest">
+                  Our Service
+                </span>
               </div>
-              <span className="px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest">
-                Our Service
-              </span>
-            </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight leading-[1.1] mb-6">
-              {service.title}
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              {service.longDescription}
-            </p>
+              <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1] mb-6">
+                {service.title}
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                {service.longDescription}
+              </p>
 
-            {/* Quick CTA */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <CalendlyButton
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "gradient-brand text-white font-bold hover:opacity-90 transition-all shadow-xl shadow-indigo-200 group"
-                )}
-              >
-                Get Free Consultation
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </CalendlyButton>
-              <Link
-                href="/contact"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "font-semibold")}
-              >
-                Send a Message
-              </Link>
-            </div>
-          </FadeIn>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <CalendlyButton
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "gradient-brand text-white font-bold hover:opacity-90 transition-all shadow-xl shadow-indigo-200 group"
+                  )}
+                >
+                  Get Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </CalendlyButton>
+                <Link
+                  href="/contact"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "font-semibold")}
+                >
+                  Send a Message
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Right — Animated Visual */}
+            <ServiceVisual id={service.id} />
+          </div>
         </div>
       </section>
 
       {/* ── What's Included ── */}
       <section className="py-16 lg:py-20 border-t border-border/40">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
             <div className="flex items-center gap-3 mb-3">
               <Sparkles className="h-5 w-5 text-primary" />
@@ -129,7 +135,7 @@ export default async function ServicePage({ params }: Props) {
 
       {/* ── Benefits ── */}
       <section className="py-16 lg:py-20 border-t border-border/40">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
             <div className="flex items-center gap-3 mb-3">
               <TrendingUp className="h-5 w-5 text-primary" />
@@ -162,7 +168,7 @@ export default async function ServicePage({ params }: Props) {
 
       {/* ── Who Is This For ── */}
       <section className="py-16 lg:py-20 border-t border-border/40">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
             <div className="flex items-center gap-3 mb-3">
               <Users className="h-5 w-5 text-primary" />
@@ -184,7 +190,7 @@ export default async function ServicePage({ params }: Props) {
 
       {/* ── Final CTA ── */}
       <section className="py-16 lg:py-24 border-t border-border/40">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
             <div
               className="relative rounded-3xl p-8 sm:p-12 text-center overflow-hidden"
@@ -220,13 +226,13 @@ export default async function ServicePage({ params }: Props) {
                 </span>
               </h2>
               <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-                Book a free 30-minute strategy call. No commitment, no pressure — just a clear plan for your business.
+                Book a free 30-minute strategy call. No pressure — just a clear plan for your business.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <CalendlyButton
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "bg-white text-primary font-bold hover:bg-white/90 hover:scale-[1.02] transition-all shadow-2xl group"
+                    "gradient-brand text-white font-bold hover:opacity-90 hover:scale-[1.02] transition-all shadow-2xl shadow-indigo-900/50 group"
                   )}
                 >
                   Book Free Strategy Call
@@ -234,13 +240,13 @@ export default async function ServicePage({ params }: Props) {
                 </CalendlyButton>
                 <Link
                   href="/contact"
-                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-white/30 text-white hover:bg-white/10 font-semibold")}
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-indigo-600/70 text-indigo-400 hover:bg-indigo-700/20 hover:border-indigo-500/80 font-semibold transition-all")}
                 >
                   Contact Us
                 </Link>
               </div>
               <p className="mt-6 text-sm text-white/40">
-                Free consultation &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; Reply within 2 hours
+                Free consultation &nbsp;·&nbsp; Reply within 2 hours
               </p>
             </div>
           </FadeIn>
